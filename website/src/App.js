@@ -78,7 +78,7 @@ class App extends Component{
       return (
         <div>
           <div classname="background">
-            <Sidebar parentCallback = {this.changeStyle} isMobile={this.state.isMobile}/>
+            <Sidebar parentCallback = {this.changeStyle} isMobile={this.state.isMobile} isDark={this.state.isDark}/>
             
             <body className={this.state.isMobile ? this.state.bodyStyle : (this.state.bodyStyle + " App-body-margin-on")}>
                 <section id="about">

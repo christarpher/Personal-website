@@ -8,6 +8,8 @@ import { faExternalLinkAlt, faSun, faMoon } from '@fortawesome/free-solid-svg-ic
 
 export class Sidebar extends Component {
 
+
+
   constructor(props) {
     super(props);
     this.state = {
@@ -19,18 +21,14 @@ export class Sidebar extends Component {
         { content: 'Projects', href: 'projects' },
         { content: 'Contact', href: 'contact' },
       ],
-      isCollapsed: true,
-      isDark: this.props.isDark
+      isCollapsed: true
     };
     this.toggleNavbar = this.toggleNavbar.bind(this);
     this.sendBackData = this.sendBackData.bind(this);
   }
 
   sendBackData() {
-    this.props.parentCallback(!this.state.isDark);
-    this.setState({
-      isDark: !this.state.isDark
-    })
+    this.props.parentCallback(this.props.isDark);
   }
 
   toggleNavbar() {
@@ -43,9 +41,9 @@ export class Sidebar extends Component {
     const { tabs, isCollapsed } = this.state;
     return (
       <nav
-        className={this.state.isDark 
-          ? "navbar navbar-expand-md fixed-top navbar-light color-nav-light" 
-          : "navbar navbar-expand-md fixed-top navbar-dark color-nav-dark"}
+        className={this.props.isDark 
+          ? "navbar navbar-expand-md fixed-top navbar-dark color-nav-dark" 
+          : "navbar navbar-expand-md fixed-top navbar-light color-nav-light"}
         id="sideNav"
       >
         <a className="navbar-brand" href="#page-top">
@@ -54,7 +52,7 @@ export class Sidebar extends Component {
           </span>
           <span className="d-none d-md-block">
             <img
-              className={this.state.isDark ? "img-profile image-dark-border" : "img-profile image-light-border"}
+              className={this.props.isDark ? "img-profile image-dark-border" : "img-profile image-light-border"}
               src={avatar}
               alt="Chris Jansen"
             />
@@ -102,9 +100,9 @@ export class Sidebar extends Component {
             
             <li className={this.props.isMobile ? "nav-item" : "nav-item-lower"}>
               <a className="nav-link" onClick={this.sendBackData}>
-                {this.state.isDark
-                  ?<FontAwesomeIcon icon={faMoon} />
-                  :<FontAwesomeIcon icon={faSun} />
+                {this.props.isDark
+                  ?<FontAwesomeIcon icon={faSun} />
+                  :<FontAwesomeIcon icon={faMoon} />
                 }
               </a>
             </li>
