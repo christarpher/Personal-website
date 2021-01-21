@@ -1,0 +1,162 @@
+@import 'fonts.css';
+@import 'sidebar.css';
+@import 'images.css';
+
+:root {
+  --image-border-dark: rgb(0, 102, 255);
+  --image-border-light: rgb(0, 70, 175);
+  --background-dark: #121212; 
+  --background-light: #ffffff;
+  --nav-background-dark: #000000;
+  --nav-background-light: #e4e4e4;
+  --text-color-dark: #e9ecef;
+  --text-color-light: #343a40;
+  --first-name-dark: rgb(197, 197, 197);
+  --first-name-light: rgb(58, 58, 58); 
+  --last-name-dark: rgb(0, 102, 255);
+  --last-name-light: rgb(0, 70, 175);
+  --hr-line-color: rgb(197, 197, 197);
+  --h1-dark: rgb(0, 102, 255);
+  --h1-light: rgb(0, 70, 175);
+  --h2-dark: rgb(0, 102, 255);
+  --h2-light: rgb(0, 70, 175);
+  --link-color-light: #61dafb;
+  --link-color-dark: #61dafb;
+}
+
+.background {
+  background-color: var(--background-dark);
+  width: 100%;
+  height: 100%;
+  color: var(--background-dark);
+}
+
+.App-body {
+  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+  font-family: "muli";
+  transition: background-color, color .2s ease;
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+  overflow: auto;
+}
+
+.App-body-margin-on {
+  margin-left: 17rem;
+}
+
+.App-body-dark {
+  background-color: var(--background-dark) !important;
+  color: var(--text-color-dark) !important;
+}
+
+.App-body-light {
+  background-color: var(--background-light) !important;
+  color: var(--text-color-light) !important;
+}
+
+.App-link {
+  color: var(--link-color-dark);
+}
+
+.blank-space {
+  height: 75px;
+  content: "";
+  display: block;
+}
+
+.blank-space2 {
+  width: 15vw;
+  content: "";
+  display: block;
+}
+
+.large-blank-space {
+  height: 20vh;
+  content: "";
+  display: block;
+}
+
+section {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+
+.color-nav-dark {
+  background-color: var(--nav-background-dark) !important;
+  transition: .2s ease;
+}
+.color-nav-light {
+  background-color: var(--nav-background-light) !important;
+  transition: .2s ease;
+}
+
+.first-last-name {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 10vw;
+  font-family: "Saira Extra Condensed";
+  font-weight: 700;
+}
+.first-name-light {
+  color: var(--first-name-light);
+  display: inline-block;
+}
+.first-name-dark {
+  color: var(--first-name-dark);
+  display: inline-block;
+}
+.last-name-light {
+  color: var(--last-name-light);
+  display: inline-block;
+}
+.last-name-dark {
+  color: var(--last-name-dark);
+  display: inline-block;
+}
+
+.about-container {
+  font-size: 1em;
+}
+
+hr {
+  height: 3px;
+  display: block;
+  clear: both;
+  background-color: var(--hr-line-color);
+  width: 100%;
+}
+
+h1 {
+  font-weight: 700;
+  font-family: "Saira Extra Condensed";
+  font-size: 10vw;
+}
+
+.h1-dark {
+  color: var(--h1-dark);
+}
+
+.h1-light {
+  color: var(--h1-light);
+}
+
+
+
+h2 {
+  font-weight: 700;
+  font-family: "Saira Extra Condensed";
+  font-size: 8vw;
+}
+
+.h2-dark {
+  color: var(--h2-dark);
+}
+
+.h2-light {
+  color: var(--h2-light);
+}
+
+
+

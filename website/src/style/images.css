@@ -1,0 +1,22 @@
+.image {
+    opacity: 1;
+    margin-left: 2%;
+    margin-right: 5%;
+    margin-bottom: 2.5%;
+    float: left;
+    object-fit: cover;
+    border-radius: 50%;
+    height: 30vw;
+    width: 30vw;
+    transition: .2s ease;
+    backface-visibility: hidden;
+}
+  
+.image-dark-border {
+    border: 5px solid rgb(0, 102, 255);
+}
+
+.image-light-border {
+    border: 5px solid rgb(0, 70, 175);
+}
+
