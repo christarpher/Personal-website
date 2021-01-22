@@ -51,9 +51,7 @@ class Scroll extends React.Component {
 
 
   scrollTo(element, offSet = 0, timeout = null) {
-    const elemPos = element
-      ? element.getBoundingClientRect().top + window.pageYOffset
-      : 0;
+    const elemPos = element ? element.getBoundingClientRect().top + window.pageYOffset : 0;
     if (timeout) {
       setTimeout(() => {
         window.scroll({ top: elemPos + offSet, left: 0, behavior: 'smooth' });
@@ -67,11 +65,10 @@ class Scroll extends React.Component {
   render() {
     return (
       <Element>
-        {typeof this.props.children === 'object' ? (
-          React.cloneElement(this.props.children, { onClick: this.handleClick })
-        ) : (
-          <span onClick={this.handleClick}>{this.props.children}</span>
-        )}
+        {typeof this.props.children === 'object' ?
+          (React.cloneElement(this.props.children, { onClick: this.handleClick })) : 
+          (<span onClick={this.handleClick}>{this.props.children}</span>)
+        }
       </Element>
     );
   }

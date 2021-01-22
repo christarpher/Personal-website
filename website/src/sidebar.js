@@ -69,7 +69,7 @@ export class Sidebar extends Component {
           aria-label="Toggle navigation"
           onClick={this.toggleNavbar}
         >
-          <span className="navbar-toggler-icon"></span>
+        <span className="navbar-toggler-icon"></span>
         </button>
         <div className={`collapse navbar-collapse ${isCollapsed ? '' : 'show'}`}
           id="navbarSupportedContent">
@@ -98,13 +98,13 @@ export class Sidebar extends Component {
               </a>
             </li>
             
-            <li className={this.props.isMobile ? "nav-item" : "nav-item-lower"}>
-              <a className="nav-link" onClick={this.sendBackData}>
+            <li className={this.props.isMobile ? "nav-item" : "nav-item-fixed"}>
+              <button className="nav-link" onClick={this.sendBackData}>
                 {this.props.isDark
                   ?<FontAwesomeIcon icon={faSun} />
                   :<FontAwesomeIcon icon={faMoon} />
                 }
-              </a>
+              </button>
             </li>
           </Scrollspy>
                 

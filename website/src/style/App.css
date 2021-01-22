@@ -22,6 +22,8 @@
   --h2-light: rgb(0, 70, 175);
   --link-color-light: #61dafb;
   --link-color-dark: #61dafb;
+  --line-height: 1.8;
+  --font-size: 1em;
 }
 
 .background {
@@ -65,21 +67,19 @@
   display: block;
 }
 
-.blank-space2 {
-  width: 15vw;
-  content: "";
-  display: block;
-}
-
-.large-blank-space {
-  height: 20vh;
-  content: "";
-  display: block;
-}
-
 section {
   margin-left: 2%;
   margin-right: 2%;
+}
+
+button {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  /*input has OS specific font-family*/
+  text-decoration: underline;
+  cursor: pointer;
+  transition-duration: .2s;
 }
 
 
@@ -98,6 +98,7 @@ section {
   font-size: 10vw;
   font-family: "Saira Extra Condensed";
   font-weight: 700;
+  transition-duration: .2s;
 }
 .first-name-light {
   color: var(--first-name-light);
@@ -116,12 +117,40 @@ section {
   display: inline-block;
 }
 
+
+
 .about-container {
-  font-size: 1em;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+.experience-container {
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+.education-container {
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+.skills-container {
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+.projects-container {
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+.contact-container {
+  font-size: var(--font-size);
+  line-height: var(--line-height);
 }
 
+.navbar {
+  transition-duration: .2s;
+}
+
+
 hr {
-  height: 3px;
+  height: 1px;
   display: block;
   clear: both;
   background-color: var(--hr-line-color);

@@ -12,6 +12,7 @@ import './style/App.css';
 class App extends Component{
 
   componentDidMount() {
+    document.title="Chris Jansen"
     this.setState({
       isMobile: this.getWidth() < 768
     })
@@ -110,19 +111,22 @@ class App extends Component{
                   <div class="blank-space"></div>
                   <hr></hr> 
                   <h2 class={this.state.isDark ? "h2-dark" : "h2-light"}>Experience</h2>
-                  <p>
+                  <div class="experience-container">
+                    <p>
                       Aenean venenatis justo purus, nec cursus est mattis elementum. Nulla rutrum interdum blandit. Nunc tortor nulla, mattis at libero non, consequat mollis orci. 
                       Curabitur ullamcorper sem eu odio sollicitudin luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
                       Nullam sit amet erat mollis magna accumsan varius. Praesent odio leo, mollis quis feugiat eu, suscipit sit amet purus. Nullam laoreet, tellus et sagittis laoreet, 
                       lacus lacus tincidunt lacus, at porta nunc nisi quis arcu.
                     </p>
+                  </div>
                 </section>
 
                 <section id="education">
                   <div class="blank-space"></div>
                   <hr></hr> 
                   <h2 class={this.state.isDark ? "h2-dark" : "h2-light"}>Education</h2>
-                  <p>
+                  <div class="education-container">
+                    <p>
                       Aliquam venenatis odio vitae pretium suscipit. Cras id massa eu mi malesuada ullamcorper at non tortor. Quisque elit tellus, maximus eget posuere viverra, 
                       dignissim a enim. Maecenas tempor accumsan libero, nec convallis sem tempor vel. Aenean non dui dapibus, pretium elit ultricies, scelerisque quam. Nullam 
                       fringilla ac mi ac viverra. Sed auctor felis ante, vitae eleifend diam placerat eu. Donec eu tincidunt nunc. Maecenas viverra finibus felis non malesuada. 
@@ -130,46 +134,53 @@ class App extends Component{
                       purus eget interdum consequat, leo ipsum commodo enim, non cursus erat erat ac mauris. Quisque facilisis enim at leo faucibus, sed feugiat nisl varius. 
                       Vivamus mollis porta dolor mattis iaculis. Etiam vitae lorem rutrum, eleifend enim vel, pulvinar augue.
                     </p>
+                  </div>
                 </section>
 
                 <section id="skills">
                   <div class="blank-space"></div>
                   <hr></hr> 
                   <h2 class={this.state.isDark ? "h2-dark" : "h2-light"}>Skills</h2>
-                  <p>
-                    Cras ante neque, pharetra eu sem commodo, rutrum scelerisque tortor. Duis mauris urna, luctus quis mi accumsan, interdum consequat nulla. 
-                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse potenti. Praesent augue nulla, vulputate eu interdum facilisis, 
-                    ultricies ac nulla. Duis pulvinar faucibus tellus sed feugiat. Donec vel tristique odio. Mauris lobortis iaculis ullamcorper. Sed id massa dui. Praesent turpis quam, 
-                    blandit vitae lectus vitae, placerat rutrum enim. Nam egestas leo neque, et congue purus rhoncus vel. Ut magna magna, scelerisque vel felis eget, 
-                    ultrices pharetra nisi. Maecenas hendrerit pharetra hendrerit.
-                  </p>
+                  <div class="skills-container">
+                    <p>
+                      Cras ante neque, pharetra eu sem commodo, rutrum scelerisque tortor. Duis mauris urna, luctus quis mi accumsan, interdum consequat nulla. 
+                      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse potenti. Praesent augue nulla, vulputate eu interdum facilisis, 
+                      ultricies ac nulla. Duis pulvinar faucibus tellus sed feugiat. Donec vel tristique odio. Mauris lobortis iaculis ullamcorper. Sed id massa dui. Praesent turpis quam, 
+                      blandit vitae lectus vitae, placerat rutrum enim. Nam egestas leo neque, et congue purus rhoncus vel. Ut magna magna, scelerisque vel felis eget, 
+                      ultrices pharetra nisi. Maecenas hendrerit pharetra hendrerit.
+                    </p>
+                  </div>
                 </section>
 
                 <section id="projects">
                   <div class="blank-space"></div>
                   <hr></hr> 
                   <h2 class={this.state.isDark ? "h2-dark" : "h2-light"}>Projects</h2>
-                  <p>
-                    Quisque maximus, nulla vitae tincidunt finibus, lorem lorem interdum ex, ut lobortis enim ex id nibh. Fusce posuere facilisis justo et consectetur. 
-                    Sed aliquam justo ullamcorper tellus viverra, id facilisis metus congue. Vestibulum vulputate elit diam, et dapibus libero porttitor vitae. 
-                    Aliquam quis lorem malesuada nulla tempor vehicula et sit amet quam. Nullam quis venenatis justo. Vestibulum sagittis bibendum luctus. 
-                    Sed at erat blandit, sagittis mi sit amet, feugiat eros. Duis neque urna, congue nec nisi quis, pretium tempor ligula. Vestibulum a mollis ligula. 
-                    Curabitur scelerisque magna lectus, vel tristique velit congue nec. In volutpat vitae massa eget placerat. Suspendisse euismod ullamcorper lorem at pellentesque. 
-                    Ut iaculis elementum elementum. Nullam gravida vulputate tellus eget ornare. Fusce dignissim ipsum quis sem viverra facilisis.
-                  </p>
+                  <div class="projects-container">
+                    <p>
+                      Quisque maximus, nulla vitae tincidunt finibus, lorem lorem interdum ex, ut lobortis enim ex id nibh. Fusce posuere facilisis justo et consectetur. 
+                      Sed aliquam justo ullamcorper tellus viverra, id facilisis metus congue. Vestibulum vulputate elit diam, et dapibus libero porttitor vitae. 
+                      Aliquam quis lorem malesuada nulla tempor vehicula et sit amet quam. Nullam quis venenatis justo. Vestibulum sagittis bibendum luctus. 
+                      Sed at erat blandit, sagittis mi sit amet, feugiat eros. Duis neque urna, congue nec nisi quis, pretium tempor ligula. Vestibulum a mollis ligula. 
+                      Curabitur scelerisque magna lectus, vel tristique velit congue nec. In volutpat vitae massa eget placerat. Suspendisse euismod ullamcorper lorem at pellentesque. 
+                      Ut iaculis elementum elementum. Nullam gravida vulputate tellus eget ornare. Fusce dignissim ipsum quis sem viverra facilisis.
+                    </p>
+                  </div>
                 </section>
 
                 <section id="contact">
                   <div class="blank-space"></div>
                   <hr></hr> 
                   <h2 class={this.state.isDark ? "h2-dark" : "h2-light"}>Contact</h2>
-                  <p>
-                    Cras ante neque, pharetra eu sem commodo, rutrum scelerisque tortor. Duis mauris urna, luctus quis mi accumsan, interdum consequat nulla. 
-                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse potenti. Praesent augue nulla, vulputate eu interdum facilisis, 
-                    ultricies ac nulla. Duis pulvinar faucibus tellus sed feugiat. Donec vel tristique odio. Mauris lobortis iaculis ullamcorper. Sed id massa dui. Praesent turpis quam, 
-                    blandit vitae lectus vitae, placerat rutrum enim. Nam egestas leo neque, et congue purus rhoncus vel. Ut magna magna, scelerisque vel felis eget, 
-                    ultrices pharetra nisi. Maecenas hendrerit pharetra hendrerit.
-                  </p>
+                  <div class="contact-container">
+                    <p>
+                      Cras ante neque, pharetra eu sem commodo, rutrum scelerisque tortor. Duis mauris urna, luctus quis mi accumsan, interdum consequat nulla. 
+                      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse potenti. Praesent augue nulla, vulputate eu interdum facilisis, 
+                      ultricies ac nulla. Duis pulvinar faucibus tellus sed feugiat. Donec vel tristique odio. Mauris lobortis iaculis ullamcorper. Sed id massa dui. Praesent turpis quam, 
+                      blandit vitae lectus vitae, placerat rutrum enim. Nam egestas leo neque, et congue purus rhoncus vel. Ut magna magna, scelerisque vel felis eget, 
+                      ultrices pharetra nisi. Maecenas hendrerit pharetra hendrerit.
+                    </p>
+                  </div>
                 </section>
 
               
