@@ -9,7 +9,7 @@
   --background-light: #ffffff;
   --nav-background-dark: #000000;
   --nav-background-light: #e4e4e4;
-  --text-color-dark: #e9ecef;
+  --text-color-dark: rgb(197, 197, 197);
   --text-color-light: #343a40;
   --first-name-dark: rgb(197, 197, 197);
   --first-name-light: rgb(58, 58, 58); 
@@ -24,6 +24,15 @@
   --link-color-dark: #61dafb;
   --line-height: 1.8;
   --font-size: 1em;
+
+  --font-size-app-body: calc(12px + 0.8vw);
+  --font-size-first-last-name: 10vw;
+  --font-size-about-contact: calc(6px + 3vw);
+  --font-size-position-name: calc(12px + 4vw);
+  --font-size-company-name: calc(6px + 3vw);
+  --font-size-position-time: calc(6px + 3vw);
+  --font-size-h1: 10vw;
+  --font-size-h2: 8vw;
 }
 
 .background {
@@ -35,7 +44,7 @@
 
 .App-body {
   min-height: 100vh;
-  font-size: calc(10px + 2vmin);
+  font-size: var(--font-size-app-body);
   font-family: "muli";
   transition: background-color, color .2s ease;
   padding-top: 5rem !important;
@@ -61,25 +70,10 @@
   color: var(--link-color-dark);
 }
 
-.blank-space {
-  height: 75px;
-  content: "";
-  display: block;
-}
 
 section {
   margin-left: 2%;
   margin-right: 2%;
-}
-
-button {
-  background: none!important;
-  border: none;
-  padding: 0!important;
-  /*input has OS specific font-family*/
-  text-decoration: underline;
-  cursor: pointer;
-  transition-duration: .2s;
 }
 
 
@@ -95,10 +89,11 @@ button {
 .first-last-name {
   text-transform: uppercase;
   text-align: center;
-  font-size: 10vw;
+  font-size: var(--font-size-first-last-name);
   font-family: "Saira Extra Condensed";
   font-weight: 700;
   transition-duration: .2s;
+  margin-bottom: 0;
 }
 .first-name-light {
   color: var(--first-name-light);
@@ -119,14 +114,94 @@ button {
 
 
 
+.about-contact {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: var(--font-size-about-contact);
+  font-family: "Saira Extra Condensed";
+  font-weight: 700;
+  margin-top: -5vw;
+  display: block;
+}
+.about-contact-dark {
+  color: var(--first-name-dark);
+}
+.about-contact-light {
+  color: var(--first-name-light);
+}
+.dark-mail {
+  color: var(--last-name-dark);
+  transition: .2s;
+}
+.dark-mail:hover {
+  color: var(--last-name-light);
+}
+.light-mail {
+  color: var(--last-name-light);
+  transition: .2s;
+}
+.light-mail:hover {
+  color: var(--last-name-dark);
+}
 .about-container {
   font-size: var(--font-size);
   line-height: var(--line-height);
 }
+.about-paragraph {
+  margin-top: 5vw;
+}
+.social-icons {
+  font-size: var(--font-size-position-name);
+  display: inline;
+  margin-right: 5vw;
+}
+.social-icons-dark {
+  color: var(--text-color-dark);
+}
+.social-icons-light {
+  color: var(--text-color-light);
+}
+
+
+
+
 .experience-container {
   font-size: var(--font-size);
   line-height: var(--line-height);
 }
+.position-name {
+  font-weight: 700;
+  font-family: "Saira Extra Condensed";
+  text-align: left;
+  font-size: var(--font-size-position-name);
+  margin-top: 5vw;
+}
+.company-name {
+  font-weight: 700;
+  font-family: "Saira Extra Condensed";
+  display: inline;
+  text-align: left;
+  font-size: var(--font-size-company-name);
+}
+.position-time {
+  font-weight: 700;
+  font-size: var(--font-size-position-time);
+  font-family: "Saira Extra Condensed";
+  display: inline;
+  float: right;
+}
+.position-time-dark {
+  color: var(--h1-dark);
+}
+.position-time-light {
+  color: var(--h1-light);
+}
+.experience-text {
+  margin-top: 5vh;
+}
+
+
+
 .education-container {
   font-size: var(--font-size);
   line-height: var(--line-height);
@@ -144,9 +219,6 @@ button {
   line-height: var(--line-height);
 }
 
-.navbar {
-  transition-duration: .2s;
-}
 
 
 hr {
@@ -155,18 +227,16 @@ hr {
   clear: both;
   background-color: var(--hr-line-color);
   width: 100%;
+  margin-top: 15vh;
 }
-
 h1 {
   font-weight: 700;
   font-family: "Saira Extra Condensed";
-  font-size: 10vw;
+  font-size: var(--font-size-h1);
 }
-
 .h1-dark {
   color: var(--h1-dark);
 }
-
 .h1-light {
   color: var(--h1-light);
 }
@@ -176,13 +246,11 @@ h1 {
 h2 {
   font-weight: 700;
   font-family: "Saira Extra Condensed";
-  font-size: 8vw;
+  font-size: var(--font-size-h2);
 }
-
 .h2-dark {
   color: var(--h2-dark);
 }
-
 .h2-light {
   color: var(--h2-light);
 }

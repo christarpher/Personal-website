@@ -8,8 +8,6 @@ import { faExternalLinkAlt, faSun, faMoon } from '@fortawesome/free-solid-svg-ic
 
 export class Sidebar extends Component {
 
-
-
   constructor(props) {
     super(props);
     this.state = {
@@ -19,7 +17,6 @@ export class Sidebar extends Component {
         { content: 'Education', href: 'education' },
         { content: 'Skills', href: 'skills' },
         { content: 'Projects', href: 'projects' },
-        { content: 'Contact', href: 'contact' },
       ],
       isCollapsed: true
     };

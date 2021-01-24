@@ -1,7 +1,8 @@
 
 import Sidebar from './sidebar';
 import { Component } from "react";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin, faDiscord } from '@fortawesome/free-brands-svg-icons';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style/App.css';
@@ -90,17 +91,22 @@ class App extends Component{
                       <div class={this.state.isDark ? "first-name-dark" : "first-name-light"}>Chris</div> 
                       <div class={this.state.isDark ? "last-name-dark" : "last-name-light"}>&nbsp;Jansen</div>
                     </div>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                      Etiam mattis non odio et tempus. Etiam congue lectus nibh, 
-                      sit amet viverra quam tempus eu. Pellentesque sed pretium metus. 
-                      Suspendisse potenti. Morbi porta mattis ex. Pellentesque egestas arcu vitae turpis commodo, 
-                      in sodales velit feugiat. Orci varius natoque penatibus et magnis dis parturient montes, 
-                      nascetur ridiculus mus. Vivamus fringilla nunc vitae velit placerat, sit amet laoreet tellus scelerisque. 
-                      Integer et mauris ut velit finibus ornare rutrum non libero. Proin accumsan vel felis euismod pulvinar. 
-                      Nulla lacinia bibendum finibus. Donec aliquet aliquam mi, in faucibus odio laoreet vel. Integer dapibus interdum mi sed consequat. 
-                      Aliquam tincidunt convallis dolor. Praesent pretium rutrum enim, at semper mi malesuada sit amet.
+                    <div class={`about-contact ${this.state.isDark ? "about-contact-dark" : "about-contact-light"}`}>
+                      Spokane Valley, WA -&nbsp;
+                      <a class={this.state.isDark ? "dark-mail" : "light-mail"} href="mailto: chrisjansen92@icloud.com">Chrisjansen92@icloud.com</a>
+                    </div>
+                    <p class="about-paragraph">
+                      A recent computer science graduate exerienced in web development, AWS, and CI/CD processes.
                     </p>
+                    <a class={`social-icons ${this.state.isDark ? "social-icons-dark" : "social-icons-light"}`} href="https://github.com/christarpher">
+                      <FontAwesomeIcon icon={faGithub} />
+                    </a> 
+                    <a class={`social-icons ${this.state.isDark ? "social-icons-dark" : "social-icons-light"}`} href="https://www.linkedin.com/in/christopher-jansen/">
+                      <FontAwesomeIcon icon={faLinkedin} />
+                    </a>
+                    <a class={`social-icons ${this.state.isDark ? "social-icons-dark" : "social-icons-light"}`} href="https://discordapp.com/users/201174269458251776">
+                      <FontAwesomeIcon icon={faDiscord} />
+                    </a>
                   </div>
                 </section>
                       
@@ -108,21 +114,27 @@ class App extends Component{
                 
       
                 <section id="experience">
-                  <div class="blank-space"></div>
                   <hr></hr> 
                   <h2 class={this.state.isDark ? "h2-dark" : "h2-light"}>Experience</h2>
                   <div class="experience-container">
                     <p>
-                      Aenean venenatis justo purus, nec cursus est mattis elementum. Nulla rutrum interdum blandit. Nunc tortor nulla, mattis at libero non, consequat mollis orci. 
-                      Curabitur ullamcorper sem eu odio sollicitudin luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
-                      Nullam sit amet erat mollis magna accumsan varius. Praesent odio leo, mollis quis feugiat eu, suscipit sit amet purus. Nullam laoreet, tellus et sagittis laoreet, 
-                      lacus lacus tincidunt lacus, at porta nunc nisi quis arcu.
+                      <div class="position-name">DevOps engineering Internship</div>
+                      <div class="company-name">Cambia health solutions</div>
+                      <div class={`position-time ${this.state.isDark ? "position-time-dark" : "position-time-light"}`}>June - September 2019</div>
+                      <div class="experience-text">
+                        <ul>
+                          <li>Worked with CI/CD pipelines to deploy Docker containers and Lambda services.</li>
+                          <li>Designed, created, and managed an automated expense report application that updated internal Atlassian Confluence pages that provided costs breakdowns by AWS service used by different internal teams in a 30/90/365 day layout.</li>
+                          <li>Created automated systems to track down improperly tagged or untagged resources to help abide by best tagging practices and minimize untracked and unreported costs.</li>
+                          <li>Improve internal tools designed to migrate databases between AWS accounts to reduce downtime and costs.</li>
+                          <li>Protect sensitive PII (Personally Identifiable Information) and PHI (Protected Health Information) to comply with HIPAA standards.</li>
+                        </ul>
+                      </div>
                     </p>
                   </div>
                 </section>
 
                 <section id="education">
-                  <div class="blank-space"></div>
                   <hr></hr> 
                   <h2 class={this.state.isDark ? "h2-dark" : "h2-light"}>Education</h2>
                   <div class="education-container">
@@ -138,7 +150,6 @@ class App extends Component{
                 </section>
 
                 <section id="skills">
-                  <div class="blank-space"></div>
                   <hr></hr> 
                   <h2 class={this.state.isDark ? "h2-dark" : "h2-light"}>Skills</h2>
                   <div class="skills-container">
@@ -153,7 +164,6 @@ class App extends Component{
                 </section>
 
                 <section id="projects">
-                  <div class="blank-space"></div>
                   <hr></hr> 
                   <h2 class={this.state.isDark ? "h2-dark" : "h2-light"}>Projects</h2>
                   <div class="projects-container">
@@ -168,20 +178,7 @@ class App extends Component{
                   </div>
                 </section>
 
-                <section id="contact">
-                  <div class="blank-space"></div>
-                  <hr></hr> 
-                  <h2 class={this.state.isDark ? "h2-dark" : "h2-light"}>Contact</h2>
-                  <div class="contact-container">
-                    <p>
-                      Cras ante neque, pharetra eu sem commodo, rutrum scelerisque tortor. Duis mauris urna, luctus quis mi accumsan, interdum consequat nulla. 
-                      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse potenti. Praesent augue nulla, vulputate eu interdum facilisis, 
-                      ultricies ac nulla. Duis pulvinar faucibus tellus sed feugiat. Donec vel tristique odio. Mauris lobortis iaculis ullamcorper. Sed id massa dui. Praesent turpis quam, 
-                      blandit vitae lectus vitae, placerat rutrum enim. Nam egestas leo neque, et congue purus rhoncus vel. Ut magna magna, scelerisque vel felis eget, 
-                      ultrices pharetra nisi. Maecenas hendrerit pharetra hendrerit.
-                    </p>
-                  </div>
-                </section>
+              
 
               
             </body>

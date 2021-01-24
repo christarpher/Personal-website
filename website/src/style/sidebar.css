@@ -15,6 +15,20 @@
     transition-duration: .2s;
 }
 
+.navbar {
+    transition-duration: .2s;
+}
+
+button {
+    background: none !important;
+    border: none;
+    padding: 0 !important;
+    /*input has OS specific font-family*/
+    text-decoration: underline;
+    cursor: pointer;
+    transition-duration: .2s;
+  }
+  
 
 #sideNav .navbar-toggler:focus {
     outline-color: #262626;
