@@ -18,8 +18,6 @@
   --hr-line-color: rgb(197, 197, 197);
   --h1-dark: rgb(0, 102, 255);
   --h1-light: rgb(0, 70, 175);
-  --h2-dark: rgb(0, 102, 255);
-  --h2-light: rgb(0, 70, 175);
   --link-color-light: #61dafb;
   --link-color-dark: #61dafb;
   --line-height: 1.8;
@@ -28,6 +26,7 @@
   --font-size-app-body: calc(12px + 0.8vw);
   --font-size-first-last-name: 10vw;
   --font-size-about-contact: calc(6px + 3vw);
+  --font-size-social-icons: calc(2rem + 3vw);
   --font-size-position-name: calc(12px + 4vw);
   --font-size-company-name: calc(6px + 3vw);
   --font-size-position-time: calc(6px + 3vw);
@@ -35,14 +34,8 @@
   --font-size-h2: 8vw;
 }
 
-.background {
-  background-color: var(--background-dark);
-  width: 100%;
-  height: 100%;
-  color: var(--background-dark);
-}
 
-.App-body {
+#App-body {
   min-height: 100vh;
   font-size: var(--font-size-app-body);
   font-family: "muli";
@@ -51,42 +44,28 @@
   padding-bottom: 5rem !important;
   overflow: auto;
 }
-
 .App-body-margin-on {
   padding-left: 17rem;
 }
-
 .App-body-dark {
   background-color: var(--background-dark) !important;
   color: var(--text-color-dark) !important;
 }
-
 .App-body-light {
   background-color: var(--background-light) !important;
   color: var(--text-color-light) !important;
 }
 
-.App-link {
-  color: var(--link-color-dark);
-}
 
 
 section {
-  margin-left: 2%;
-  margin-right: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 
-.color-nav-dark {
-  background-color: var(--nav-background-dark) !important;
-  transition: .2s ease;
-}
-.color-nav-light {
-  background-color: var(--nav-background-light) !important;
-  transition: .2s ease;
-}
 
-.first-last-name {
+#first-last-name {
   text-transform: uppercase;
   text-align: center;
   font-size: var(--font-size-first-last-name);
@@ -114,7 +93,7 @@ section {
 
 
 
-.about-contact {
+#about-contact {
   text-transform: uppercase;
   text-align: center;
   font-size: var(--font-size-about-contact);
@@ -143,23 +122,28 @@ section {
 .light-mail:hover {
   color: var(--last-name-dark);
 }
-.about-container {
+#about-container {
   font-size: var(--font-size);
   line-height: var(--line-height);
 }
-.about-paragraph {
+#about-container p {
   margin-top: 5vw;
 }
-.social-icons {
-  font-size: var(--font-size-position-name);
-  display: inline-block;
-  margin-right: 5vw;
+#social-icons {
+  font-size: var(--font-size-social-icons);
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: content;
+  justify-content: space-evenly;
   transition: .2s;
 }
-.social-icons-dark {
+#social-icons div, #social-icons a {
+  flex-basis: calc(100% / 6);
+}
+.icons-dark {
   color: var(--text-color-dark);
 }
-.social-icons-light {
+.icons-light {
   color: var(--text-color-light);
 }
 
@@ -177,7 +161,7 @@ section {
   font-size: var(--font-size-position-name);
   margin-top: 5vw;
 }
-.company-name {
+.company-name, .skills-header {
   font-weight: 700;
   font-family: "Saira Extra Condensed";
   display: inline;
@@ -198,7 +182,7 @@ section {
   color: var(--h1-light);
 }
 .experience-text {
-  margin-top: 5vh;
+  margin-top: 3vh;
 }
 
 
@@ -207,10 +191,45 @@ section {
   font-size: var(--font-size);
   line-height: var(--line-height);
 }
+
+
+
 .skills-container {
   font-size: var(--font-size);
   line-height: var(--line-height);
 }
+.skills-text {
+  margin-top: 3vh;
+}
+#skills-icons {
+  font-size: var(--font-size-social-icons);
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: content;
+  justify-content: space-between;
+  transition: .2s;
+}
+#skills-icons div, #skills-icons a {
+  flex-basis: calc(100% / 6);
+}
+#skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: content;
+  justify-content: space-between;
+}
+#skills-list li {
+  flex-basis: 50%;
+}
+@media (max-width: 768px) {
+  #skills-list li {
+    flex-basis: 100%;
+  }
+}
+
+
+
+
 .projects-container {
   font-size: var(--font-size);
   line-height: var(--line-height);
@@ -230,31 +249,26 @@ hr {
   width: 100%;
   margin-top: 15vh;
 }
+
 h1 {
   font-weight: 700;
   font-family: "Saira Extra Condensed";
   font-size: var(--font-size-h1);
 }
-.h1-dark {
-  color: var(--h1-dark);
-}
-.h1-light {
-  color: var(--h1-light);
-}
-
-
-
 h2 {
   font-weight: 700;
   font-family: "Saira Extra Condensed";
   font-size: var(--font-size-h2);
 }
-.h2-dark {
-  color: var(--h2-dark);
+
+.h1-dark, .h2-dark {
+  color: var(--h1-dark);
 }
-.h2-light {
-  color: var(--h2-light);
+.h1-light, .h2-light {
+  color: var(--h1-light);
 }
+
+
 
 
 

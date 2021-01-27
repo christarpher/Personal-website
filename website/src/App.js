@@ -2,7 +2,12 @@
 import Sidebar from './sidebar';
 import { Component } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTerminal } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin, faDiscord } from '@fortawesome/free-brands-svg-icons';
+import { faReact, faHtml5, faSass, faCss3Alt, faNode, faJs } from '@fortawesome/free-brands-svg-icons';
+import { faPython, faJava } from '@fortawesome/free-brands-svg-icons';
+import { faAws } from '@fortawesome/free-brands-svg-icons';
+import { faWindows, faApple, faLinux, faGit, faDocker, faJenkins } from '@fortawesome/free-brands-svg-icons';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style/App.css';
@@ -19,14 +24,12 @@ class App extends Component{
     })
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       this.setState({
-        style: "dark",
-        bodyStyle: "App-body App-body-dark",
+        bodyStyle: "App-body-dark",
         isDark: true
       });
     }else{
       this.setState({
-        style: "light",
-        bodyStyle: "App-body App-body-light",
+        bodyStyle: "App-body-light",
         isDark: false
       });
     }
@@ -41,11 +44,9 @@ class App extends Component{
     super(props);
     this.state = {
       isMobile: this.getWidth() < 768,
-      style: "dark",
       isDark: true,
-      bodyStyle: "App-body App-body-dark",
+      bodyStyle: "App-body-dark",
     }
-    
     this.changeStyle = this.changeStyle.bind(this);
     this.getWidth = this.getWidth.bind(this);
   }
@@ -63,15 +64,13 @@ class App extends Component{
   changeStyle(isDarkChild){
     if(isDarkChild){
       this.setState(state => ({
-        style: "light",
         isDark: false,
-        bodyStyle: "App-body App-body-light"
+        bodyStyle: "App-body-light"
       }));
     }else{
       this.setState(state => ({
-        style: "dark",
         isDark: true,
-        bodyStyle: "App-body App-body-dark"
+        bodyStyle: "App-body-dark"
       }));
     }
   }
@@ -82,35 +81,138 @@ class App extends Component{
           <div classname="background">
             <Sidebar parentCallback = {this.changeStyle} isMobile={this.state.isMobile} isDark={this.state.isDark}/>
             
-            <body className={this.state.isMobile ? this.state.bodyStyle : (this.state.bodyStyle + " App-body-margin-on")}>
+            <body id="App-body" className={this.state.isMobile ? this.state.bodyStyle : (this.state.bodyStyle + " App-body-margin-on")}>
                 <section id="about">
                   
 
-                  <div class="about-container">
-                    <div class="first-last-name">
+                  <div id="about-container">
+                    <div id="first-last-name">
                       <div class={this.state.isDark ? "first-name-dark" : "first-name-light"}>Chris</div> 
                       <div class={this.state.isDark ? "last-name-dark" : "last-name-light"}>&nbsp;Jansen</div>
                     </div>
-                    <div class={`about-contact ${this.state.isDark ? "about-contact-dark" : "about-contact-light"}`}>
+                    <div id="about-contact" class={this.state.isDark ? "about-contact-dark" : "about-contact-light"}>
                       Spokane Valley, WA -&nbsp;
                       <a class={this.state.isDark ? "dark-mail" : "light-mail"} href="mailto: chrisjansen92@icloud.com">Chrisjansen92@icloud.com</a>
                     </div>
-                    <p class="about-paragraph">
-                      A recent computer science graduate exerienced in web development, AWS, and CI/CD processes.
+                    <p>
+                      A recent computer science graduate exerienced in web development, AWS, CI/CD processes, and currently looking for work.
                     </p>
-                    <a class={`social-icons ${this.state.isDark ? "social-icons-dark" : "social-icons-light"}`} href="https://github.com/christarpher">
-                      <FontAwesomeIcon icon={faGithub} />
-                    </a> 
-                    <a class={`social-icons ${this.state.isDark ? "social-icons-dark" : "social-icons-light"}`} href="https://www.linkedin.com/in/christopher-jansen/">
-                      <FontAwesomeIcon icon={faLinkedin} />
-                    </a>
-                    <a class={`social-icons ${this.state.isDark ? "social-icons-dark" : "social-icons-light"}`} href="https://discordapp.com/users/201174269458251776">
-                      <FontAwesomeIcon icon={faDiscord} />
-                    </a>
+                    <div id="social-icons">
+                      <a class={this.state.isDark ? "icons-dark" : "icons-light"} href="https://github.com/christarpher">
+                        <FontAwesomeIcon icon={faGithub} />
+                      </a> 
+                      <a class={this.state.isDark ? "icons-dark" : "icons-light"} href="https://www.linkedin.com/in/christopher-jansen/">
+                        <FontAwesomeIcon icon={faLinkedin} />
+                      </a>
+                      <a class={this.state.isDark ? "icons-dark" : "icons-light"} href="https://discordapp.com/users/201174269458251776">
+                        <FontAwesomeIcon icon={faDiscord} />
+                      </a>
+                    </div>
                   </div>
                 </section>
                       
-                  
+
+
+
+                <section id="skills">
+                  <hr></hr> 
+                  <h2 class={this.state.isDark ? "h2-dark" : "h2-light"}>Skills</h2>
+                  <div class="skills-container">
+                    <p>
+                    <div class="skills-header">Web Development</div>
+                      <div id="skills-icons">
+                        <div class={this.state.isDark ? "icons-dark" : "icons-light"}>
+                          <FontAwesomeIcon icon={faReact} />
+                        </div> 
+                        <div class={this.state.isDark ? "icons-dark" : "icons-light"}>
+                          <FontAwesomeIcon icon={faHtml5} />
+                        </div> 
+                        <div class={this.state.isDark ? "icons-dark" : "icons-light"}>
+                          <FontAwesomeIcon icon={faCss3Alt} />
+                        </div> 
+                        <div class={this.state.isDark ? "icons-dark" : "icons-light"}>
+                          <FontAwesomeIcon icon={faSass} />
+                        </div> 
+                        <div class={this.state.isDark ? "icons-dark" : "icons-light"}>
+                          <FontAwesomeIcon icon={faNode} />
+                        </div> 
+                        <div class={this.state.isDark ? "icons-dark" : "icons-light"}>
+                          <FontAwesomeIcon icon={faJs} />
+                        </div> 
+                      </div>
+                    <div class="skills-header">Programming and Scripting</div>
+                      <div id="skills-icons">
+                        <div class={this.state.isDark ? "icons-dark" : "icons-light"}>
+                          <FontAwesomeIcon icon={faPython} />
+                        </div> 
+                        <div class={this.state.isDark ? "icons-dark" : "icons-light"}>
+                          <FontAwesomeIcon icon={faJava} />
+                        </div> 
+                        <div class={this.state.isDark ? "icons-dark" : "icons-light"}>
+                          <FontAwesomeIcon icon={faTerminal} />
+                        </div> 
+                        <div class={this.state.isDark ? "icons-dark" : "icons-light"} style={{fontWeight: 600}}>
+                          C
+                        </div> 
+                        <div class={this.state.isDark ? "icons-dark" : "icons-light"} style={{fontWeight: 600}}>
+                          C++
+                        </div> 
+                      </div>
+                    <div class="skills-header"><FontAwesomeIcon icon={faAws} />&nbsp;&nbsp;Cloud Computing</div>
+                      <div class="skills-text">
+                        <ul id="skills-list">
+                          <li>EC2</li>
+                          <li>Lambda</li>
+                          <li>Route53</li>
+                          <li>DynamoDB</li>
+                          <li>IAM</li>
+                          <li>Secrets Manager</li>
+                          <li>Cost Explorer</li>
+                          <li>Costs and Usage Reports</li>
+                          <li>S3</li>
+                          <li>Database Migration Service</li>
+                        </ul>
+                      </div>
+                    <div class="skills-header">Tools and Operating Systems</div>
+                      <div id="skills-icons">
+                      <div class={this.state.isDark ? "icons-dark" : "icons-light"}>
+                          <FontAwesomeIcon icon={faGit} />
+                        </div> 
+                        <div class={this.state.isDark ? "icons-dark" : "icons-light"}>
+                          <FontAwesomeIcon icon={faDocker} />
+                        </div> 
+                        <div class={this.state.isDark ? "icons-dark" : "icons-light"}>
+                          <FontAwesomeIcon icon={faJenkins} />
+                        </div> 
+                        <div class={this.state.isDark ? "icons-dark" : "icons-light"}>
+                          <FontAwesomeIcon icon={faApple} />
+                        </div> 
+                        <div class={this.state.isDark ? "icons-dark" : "icons-light"}>
+                          <FontAwesomeIcon icon={faLinux} />
+                        </div> 
+                        <div class={this.state.isDark ? "icons-dark" : "icons-light"}>
+                          <FontAwesomeIcon icon={faWindows} />
+                        </div> 
+                      </div>
+                      
+                    </p>
+                  </div>
+                </section>
+
+                <section id="projects">
+                  <hr></hr> 
+                  <h2 class={this.state.isDark ? "h2-dark" : "h2-light"}>Projects</h2>
+                  <div class="projects-container">
+                    <p>
+                      Quisque maximus, nulla vitae tincidunt finibus, lorem lorem interdum ex, ut lobortis enim ex id nibh. Fusce posuere facilisis justo et consectetur. 
+                      Sed aliquam justo ullamcorper tellus viverra, id facilisis metus congue. Vestibulum vulputate elit diam, et dapibus libero porttitor vitae. 
+                      Aliquam quis lorem malesuada nulla tempor vehicula et sit amet quam. Nullam quis venenatis justo. Vestibulum sagittis bibendum luctus. 
+                      Sed at erat blandit, sagittis mi sit amet, feugiat eros. Duis neque urna, congue nec nisi quis, pretium tempor ligula. Vestibulum a mollis ligula. 
+                      Curabitur scelerisque magna lectus, vel tristique velit congue nec. In volutpat vitae massa eget placerat. Suspendisse euismod ullamcorper lorem at pellentesque. 
+                      Ut iaculis elementum elementum. Nullam gravida vulputate tellus eget ornare. Fusce dignissim ipsum quis sem viverra facilisis.
+                    </p>
+                  </div>
+                </section>
                 
       
                 <section id="experience">
@@ -139,44 +241,18 @@ class App extends Component{
                   <h2 class={this.state.isDark ? "h2-dark" : "h2-light"}>Education</h2>
                   <div class="education-container">
                     <p>
-                      Aliquam venenatis odio vitae pretium suscipit. Cras id massa eu mi malesuada ullamcorper at non tortor. Quisque elit tellus, maximus eget posuere viverra, 
-                      dignissim a enim. Maecenas tempor accumsan libero, nec convallis sem tempor vel. Aenean non dui dapibus, pretium elit ultricies, scelerisque quam. Nullam 
-                      fringilla ac mi ac viverra. Sed auctor felis ante, vitae eleifend diam placerat eu. Donec eu tincidunt nunc. Maecenas viverra finibus felis non malesuada. 
-                      Suspendisse rhoncus nibh massa, in pharetra eros volutpat nec. Duis volutpat nulla elit, vel imperdiet sem faucibus a. Aenean a commodo mi. Sed interdum, 
-                      purus eget interdum consequat, leo ipsum commodo enim, non cursus erat erat ac mauris. Quisque facilisis enim at leo faucibus, sed feugiat nisl varius. 
-                      Vivamus mollis porta dolor mattis iaculis. Etiam vitae lorem rutrum, eleifend enim vel, pulvinar augue.
+                      <div class="position-name">Bachelors of Science</div>
+                      <div class="company-name">Oregon State University</div>
+                      <div class={`position-time ${this.state.isDark ? "position-time-dark" : "position-time-light"}`}>Graduated: April 2020</div>
+                      <div class="experience-text">
+                        Major: Computer Science (Systems Option)<br/>
+                        GPA: 3.4 
+                      </div>
                     </p>
                   </div>
                 </section>
 
-                <section id="skills">
-                  <hr></hr> 
-                  <h2 class={this.state.isDark ? "h2-dark" : "h2-light"}>Skills</h2>
-                  <div class="skills-container">
-                    <p>
-                      Cras ante neque, pharetra eu sem commodo, rutrum scelerisque tortor. Duis mauris urna, luctus quis mi accumsan, interdum consequat nulla. 
-                      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse potenti. Praesent augue nulla, vulputate eu interdum facilisis, 
-                      ultricies ac nulla. Duis pulvinar faucibus tellus sed feugiat. Donec vel tristique odio. Mauris lobortis iaculis ullamcorper. Sed id massa dui. Praesent turpis quam, 
-                      blandit vitae lectus vitae, placerat rutrum enim. Nam egestas leo neque, et congue purus rhoncus vel. Ut magna magna, scelerisque vel felis eget, 
-                      ultrices pharetra nisi. Maecenas hendrerit pharetra hendrerit.
-                    </p>
-                  </div>
-                </section>
-
-                <section id="projects">
-                  <hr></hr> 
-                  <h2 class={this.state.isDark ? "h2-dark" : "h2-light"}>Projects</h2>
-                  <div class="projects-container">
-                    <p>
-                      Quisque maximus, nulla vitae tincidunt finibus, lorem lorem interdum ex, ut lobortis enim ex id nibh. Fusce posuere facilisis justo et consectetur. 
-                      Sed aliquam justo ullamcorper tellus viverra, id facilisis metus congue. Vestibulum vulputate elit diam, et dapibus libero porttitor vitae. 
-                      Aliquam quis lorem malesuada nulla tempor vehicula et sit amet quam. Nullam quis venenatis justo. Vestibulum sagittis bibendum luctus. 
-                      Sed at erat blandit, sagittis mi sit amet, feugiat eros. Duis neque urna, congue nec nisi quis, pretium tempor ligula. Vestibulum a mollis ligula. 
-                      Curabitur scelerisque magna lectus, vel tristique velit congue nec. In volutpat vitae massa eget placerat. Suspendisse euismod ullamcorper lorem at pellentesque. 
-                      Ut iaculis elementum elementum. Nullam gravida vulputate tellus eget ornare. Fusce dignissim ipsum quis sem viverra facilisis.
-                    </p>
-                  </div>
-                </section>
+                
 
               
 

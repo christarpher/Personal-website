@@ -12,11 +12,11 @@ export class Sidebar extends Component {
     super(props);
     this.state = {
       tabs: [
-        { content: 'About', href: 'about' },  
+        { content: 'About', href: 'about' },
+        { content: 'Skills', href: 'skills' },
+        { content: 'Projects', href: 'projects' },  
         { content: 'Experience', href: 'experience' },
         { content: 'Education', href: 'education' },
-        { content: 'Skills', href: 'skills' },
-        { content: 'Projects', href: 'projects' },
       ],
       isCollapsed: true
     };
@@ -38,9 +38,9 @@ export class Sidebar extends Component {
     const { tabs, isCollapsed } = this.state;
     return (
       <nav
-        className={this.props.isDark 
-          ? "navbar navbar-expand-md fixed-top navbar-dark color-nav-dark" 
-          : "navbar navbar-expand-md fixed-top navbar-light color-nav-light"}
+        className={`navbar navbar-expand-md fixed-top ${this.props.isDark 
+          ? "navbar-dark color-nav-dark"
+          : "navbar-light color-nav-light"}`}
         id="sideNav"
       >
         <a className="navbar-brand" href="#page-top">
@@ -49,16 +49,14 @@ export class Sidebar extends Component {
           </span>
           <span className="d-none d-md-block">
             <img
-              className={this.props.isDark ? "img-profile image-dark-border" : "img-profile image-light-border"}
+              className={`img-profile ${this.props.isDark ? "image-dark-border" : "image-light-border"}`}
               src={avatar}
               alt="Chris Jansen"
             />
           </span>
         </a>
         <button
-          className={`navbar-toggler navbar-toggler-right ${
-            isCollapsed ? 'collapsed' : ''
-            }`}
+          className={`navbar-toggler navbar-toggler-right ${isCollapsed ? 'collapsed' : ''}`}
           type="button"
           data-toggle="collapse"
           aria-controls="navbarSupportedContent"
@@ -97,10 +95,7 @@ export class Sidebar extends Component {
             
             <li className={this.props.isMobile ? "nav-item" : "nav-item-fixed"}>
               <button className="nav-link" onClick={this.sendBackData}>
-                {this.props.isDark
-                  ?<FontAwesomeIcon icon={faSun} />
-                  :<FontAwesomeIcon icon={faMoon} />
-                }
+                {this.props.isDark ? <FontAwesomeIcon icon={faSun} /> : <FontAwesomeIcon icon={faMoon} />}
               </button>
             </li>
           </Scrollspy>

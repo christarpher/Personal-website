@@ -19,11 +19,21 @@
     transition-duration: .2s;
 }
 
+
+.color-nav-dark {
+    background-color: var(--nav-background-dark) !important;
+    transition: .2s ease;
+}
+.color-nav-light {
+    background-color: var(--nav-background-light) !important;
+    transition: .2s ease;
+}
+
+
 button {
     background: none !important;
     border: none;
     padding: 0 !important;
-    /*input has OS specific font-family*/
     text-decoration: underline;
     cursor: pointer;
     transition-duration: .2s;
