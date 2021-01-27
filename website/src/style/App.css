@@ -52,18 +52,17 @@
     padding-left: 17rem;
 }
 .App-body-dark {
-    background-color: var(--background-dark) !important;
-    color: var(--text-color-dark) !important;
+    background-color: var(--background-dark);
+    color: var(--text-color-dark);
 }
 .App-body-light {
-    background-color: var(--background-light) !important;
-    color: var(--text-color-light) !important;
+    background-color: var(--background-light);
+    color: var(--text-color-light);
 }
 section {
     padding-left: 2%;
     padding-right: 2%;
 }
-
 
 
 

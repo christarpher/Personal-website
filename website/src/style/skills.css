@@ -14,6 +14,20 @@
     text-align: center;
     transition: .2s;
 }
+
+#skills-icons .icons-dark {
+    color: var(--text-color-dark);
+}
+#skills-icons .icons-dark:hover {
+    color: var(--last-name-dark);
+}
+#skills-icons .icons-light {
+    color: var(--text-color-light);
+}
+#skills-icons .icons-light:hover {
+    color: var(--last-name-light);
+}
+
 .skills-header {
     font-weight: 700;
     font-family: "Saira Extra Condensed";

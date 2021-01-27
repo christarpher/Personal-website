@@ -5,9 +5,10 @@ import { faReact, faHtml5, faSass, faCss3Alt, faNode, faJs } from '@fortawesome/
 import { faPython, faJava } from '@fortawesome/free-brands-svg-icons';
 import { faAws } from '@fortawesome/free-brands-svg-icons';
 import { faWindows, faApple, faLinux, faGit, faDocker, faJenkins } from '@fortawesome/free-brands-svg-icons';
-
+import CustomTooltip from './tooltip';
 
 class Skills extends Component {
+
     render() {
         return (
             <section id="skills">
@@ -17,44 +18,68 @@ class Skills extends Component {
                     <p>
                     <div class="skills-header">Web Development</div>
                         <div id="skills-icons">
-                            <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
-                                <FontAwesomeIcon icon={faReact} />
-                            </div> 
-                            <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
-                                <FontAwesomeIcon icon={faHtml5} />
-                            </div> 
-                            <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
-                                <FontAwesomeIcon icon={faCss3Alt} />
-                            </div> 
-                            <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
-                                <FontAwesomeIcon icon={faSass} />
-                            </div> 
-                            <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
-                                <FontAwesomeIcon icon={faNode} />
-                            </div> 
-                            <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
-                                <FontAwesomeIcon icon={faJs} />
-                            </div> 
+                            <CustomTooltip title="React" isDark={this.props.isDark}>
+                                <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
+                                    <FontAwesomeIcon icon={faReact} />
+                                </div>
+                            </CustomTooltip>
+                            <CustomTooltip title="HTML" isDark={this.props.isDark}>
+                                <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
+                                    <FontAwesomeIcon icon={faHtml5} />
+                                </div>
+                            </CustomTooltip> 
+                            <CustomTooltip title="CSS" isDark={this.props.isDark}>
+                                <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
+                                    <FontAwesomeIcon icon={faCss3Alt} />
+                                </div>
+                            </CustomTooltip>
+                            <CustomTooltip title="Sass" isDark={this.props.isDark}>
+                                <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
+                                    <FontAwesomeIcon icon={faSass} />
+                                </div>
+                            </CustomTooltip>
+                            <CustomTooltip title="Node.js" isDark={this.props.isDark}>
+                                <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
+                                    <FontAwesomeIcon icon={faNode} />
+                                </div>
+                            </CustomTooltip>
+                            <CustomTooltip title="JavaScript" isDark={this.props.isDark}>
+                                <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
+                                    <FontAwesomeIcon icon={faJs} />
+                                </div>
+                            </CustomTooltip>
                         </div>
                     <div class="skills-header">Programming and Scripting</div>
                         <div id="skills-icons">
-                            <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
-                                <FontAwesomeIcon icon={faPython} />
-                            </div> 
-                            <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
-                                <FontAwesomeIcon icon={faJava} />
-                            </div> 
-                            <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
-                                <FontAwesomeIcon icon={faTerminal} />
-                            </div> 
-                            <div class={this.props.isDark ? "icons-dark" : "icons-light"} style={{fontWeight: 600}}>
-                                C
-                            </div> 
-                            <div class={this.props.isDark ? "icons-dark" : "icons-light"} style={{fontWeight: 600}}>
-                                C++
-                            </div> 
+                            <CustomTooltip title="Python" isDark={this.props.isDark}>
+                                <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
+                                    <FontAwesomeIcon icon={faPython} />
+                                </div> 
+                            </CustomTooltip>
+                            <CustomTooltip title="Java" isDark={this.props.isDark}>
+                                <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
+                                    <FontAwesomeIcon icon={faJava} />
+                                </div> 
+                            </CustomTooltip>
+                            <CustomTooltip title="Bash Scripting" isDark={this.props.isDark}>
+                                <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
+                                    <FontAwesomeIcon icon={faTerminal} />
+                                </div> 
+                            </CustomTooltip>
+                            <CustomTooltip title="C (Language)" isDark={this.props.isDark}>
+                                <div class={this.props.isDark ? "icons-dark" : "icons-light"} style={{fontWeight: 600}}>
+                                    C
+                                </div>
+                            </CustomTooltip>
+                            <CustomTooltip title="C++ (Language)" isDark={this.props.isDark}>
+                                <div class={this.props.isDark ? "icons-dark" : "icons-light"} style={{fontWeight: 600}}>
+                                    C++
+                                </div>
+                            </CustomTooltip>
                         </div>
-                    <div class="skills-header"><FontAwesomeIcon icon={faAws} />&nbsp;&nbsp;Cloud Computing</div>
+                        <div class="skills-header">
+                            <FontAwesomeIcon icon={faAws} />&nbsp;&nbsp;Cloud Computing
+                        </div>
                         <div class="skills-text">
                             <ul id="skills-list">
                                 <li>EC2</li>
@@ -71,24 +96,37 @@ class Skills extends Component {
                         </div>
                     <div class="skills-header">Tools and Operating Systems</div>
                         <div id="skills-icons">
-                        <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
-                                <FontAwesomeIcon icon={faGit} />
-                            </div> 
-                            <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
-                                <FontAwesomeIcon icon={faDocker} />
-                            </div> 
-                            <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
-                                <FontAwesomeIcon icon={faJenkins} />
-                            </div> 
-                            <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
-                                <FontAwesomeIcon icon={faApple} />
-                            </div> 
-                            <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
-                                <FontAwesomeIcon icon={faLinux} />
-                            </div> 
-                            <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
-                                <FontAwesomeIcon icon={faWindows} />
-                            </div> 
+                            <CustomTooltip title="Git (Version Control)" isDark={this.props.isDark}>
+                                <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
+                                    <FontAwesomeIcon icon={faGit} />
+                                </div> 
+                            </CustomTooltip>
+                            <CustomTooltip title="Docker" isDark={this.props.isDark}>
+                                <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
+                                    <FontAwesomeIcon icon={faDocker} />
+                                </div> 
+                            </CustomTooltip>
+                            <CustomTooltip title="Jenkins (CI/CD)" isDark={this.props.isDark}>
+                                <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
+                                    <FontAwesomeIcon icon={faJenkins} />
+                                </div> 
+                            </CustomTooltip>
+                            <CustomTooltip title="macOS" isDark={this.props.isDark}>
+                                <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
+                                    <FontAwesomeIcon icon={faApple} />
+                                </div> 
+                            </CustomTooltip>
+                            <CustomTooltip title="Linux" isDark={this.props.isDark}>
+                                <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
+                                    <FontAwesomeIcon icon={faLinux} />
+                                </div> 
+                            </CustomTooltip>
+                            <CustomTooltip title="Windows" isDark={this.props.isDark}>
+                                <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
+                                    <FontAwesomeIcon icon={faWindows} />
+                                </div> 
+                            </CustomTooltip>
+                            
                         </div>
                         
                     </p>

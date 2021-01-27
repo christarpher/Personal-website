@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faDiscord } from '@fortawesome/free-brands-svg-icons';
+import CustomTooltip from './tooltip'
 
 class About extends Component {
     render() {
@@ -19,15 +20,21 @@ class About extends Component {
                         A recent computer science graduate exerienced in web development, AWS, CI/CD processes, and currently looking for work.
                     </p>
                     <div id="social-icons">
-                        <a class={this.props.isDark ? "icons-dark" : "icons-light"} href="https://github.com/christarpher">
-                            <FontAwesomeIcon icon={faGithub} />
-                        </a> 
-                        <a class={this.props.isDark ? "icons-dark" : "icons-light"} href="https://www.linkedin.com/in/christopher-jansen/">
-                            <FontAwesomeIcon icon={faLinkedin} />
-                        </a>
-                        <a class={this.props.isDark ? "icons-dark" : "icons-light"} href="https://discordapp.com/users/201174269458251776">
-                            <FontAwesomeIcon icon={faDiscord} />
-                        </a>
+                        <CustomTooltip title="View my GitHub" isDark={this.props.isDark}>
+                            <a class={this.props.isDark ? "icons-dark" : "icons-light"} href="https://github.com/christarpher">
+                                <FontAwesomeIcon icon={faGithub} />
+                            </a>
+                        </CustomTooltip> 
+                        <CustomTooltip title="Connect on LinkedIn" isDark={this.props.isDark}>
+                            <a class={this.props.isDark ? "icons-dark" : "icons-light"} href="https://www.linkedin.com/in/christopher-jansen/">
+                                <FontAwesomeIcon icon={faLinkedin} />
+                            </a>
+                        </CustomTooltip>
+                        <CustomTooltip title="Message me on Discord" isDark={this.props.isDark}>
+                            <a class={this.props.isDark ? "icons-dark" : "icons-light"} href="https://discordapp.com/users/201174269458251776">
+                                <FontAwesomeIcon icon={faDiscord} />
+                            </a>
+                        </CustomTooltip>
                     </div>
                 </div>
             </section>

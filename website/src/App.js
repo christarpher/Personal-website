@@ -25,7 +25,7 @@ class App extends Component{
 				bodyStyle: "App-body-dark",
 				isDark: true
 			});
-		}else{
+		} else {
 			this.setState({
 				bodyStyle: "App-body-light",
 				isDark: false
@@ -33,7 +33,7 @@ class App extends Component{
 		}
 		window.addEventListener('resize', () => {
 				this.setState({
-						isMobile: this.getWidth() < 768
+					isMobile: this.getWidth() < 768
 				});
 		}, false);
 	}
@@ -65,7 +65,7 @@ class App extends Component{
 				isDark: false,
 				bodyStyle: "App-body-light"
 			}));
-		}else{
+		} else {
 			this.setState(state => ({
 				isDark: true,
 				bodyStyle: "App-body-dark"
