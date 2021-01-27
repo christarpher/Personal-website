@@ -1,0 +1,34 @@
+.experience-container, .education-container {
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+}
+.position-name {
+    font-weight: 700;
+    font-family: "Saira Extra Condensed";
+    text-align: left;
+    font-size: var(--font-size-position-name);
+    margin-top: 5vw;
+}
+.company-name {
+    font-weight: 700;
+    font-family: "Saira Extra Condensed";
+    display: inline;
+    text-align: left;
+    font-size: var(--font-size-company-name);
+}
+.position-time {
+    font-weight: 700;
+    font-size: var(--font-size-position-time);
+    font-family: "Saira Extra Condensed";
+    display: inline;
+    float: right;
+}
+.position-time-dark {
+    color: var(--h1-dark);
+}
+.position-time-light {
+    color: var(--h1-light);
+}
+.experience-text {
+    margin-top: 3vh;
+}

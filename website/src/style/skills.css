@@ -1,0 +1,40 @@
+.skills-container {
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+}
+.skills-text {
+    margin-top: 3vh;
+}
+#skills-icons {
+    font-size: var(--font-size-social-icons);
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: content;
+    justify-content: space-evenly;
+    text-align: center;
+    transition: .2s;
+}
+.skills-header {
+    font-weight: 700;
+    font-family: "Saira Extra Condensed";
+    display: inline;
+    text-align: left;
+    font-size: var(--font-size-company-name);
+}
+#skills-icons div, #skills-icons a {
+    flex-basis: calc(100% / 6);
+}
+#skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: content;
+    justify-content: space-between;
+}
+#skills-list li {
+    flex-basis: 50%;
+}
+@media (max-width: 768px) {
+    #skills-list li {
+        flex-basis: 100%;
+    }
+}
