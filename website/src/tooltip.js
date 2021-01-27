@@ -67,7 +67,7 @@ class CustomTooltip extends Component {
     tooltipSelector(){
         if(this.props.isDark) {
             return ( 
-                <DarkTooltip title={this.props.title} placement={this.placement} PopperProps={this.offsetProps} arrow TransitionComponent={Zoom}>
+                <DarkTooltip title={this.props.title} placement={this.placement} PopperProps={this.offsetProps} arrow TransitionComponent={Zoom} enterTouchDelay={0}>
                     <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
                         {this.props.children}
                     </div>
@@ -75,7 +75,7 @@ class CustomTooltip extends Component {
             );
         } else {
             return ( 
-                <LightTooltip title={this.props.title} placement={this.placement} PopperProps={this.offsetProps} arrow TransitionComponent={Zoom}>
+                <LightTooltip title={this.props.title} placement={this.placement} PopperProps={this.offsetProps} arrow TransitionComponent={Zoom} enterTouchDelay={0}>
                     <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
                         {this.props.children}
                     </div>
