@@ -13,7 +13,7 @@ class About extends Component {
                         <div class={this.props.isDark ? "last-name-dark" : "last-name-light"}>&nbsp;Jansen</div>
                     </div>
                     <div id="about-contact" class={this.props.isDark ? "about-contact-dark" : "about-contact-light"}>
-                        Spokane Valley, WA -&nbsp;
+                        Beaverton, OR -&nbsp;
                         <a class={this.props.isDark ? "dark-mail" : "light-mail"} href="mailto: chrisjansen92@icloud.com">Chrisjansen92@icloud.com</a>
                     </div>
                     <p>
