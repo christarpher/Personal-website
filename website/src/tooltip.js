@@ -47,8 +47,8 @@ const DarkTooltip = withStyles((theme) => ({
 class CustomTooltip extends Component {
 
     constructor(props){
-		super(props);
-		this.tooltipSelector = this.tooltipSelector.bind(this);
+        super(props);
+        this.tooltipSelector = this.tooltipSelector.bind(this);
     }
 
     offsetProps = {
@@ -68,7 +68,7 @@ class CustomTooltip extends Component {
         if(this.props.isDark) {
             return ( 
                 <DarkTooltip title={this.props.title} placement={this.placement} PopperProps={this.offsetProps} arrow TransitionComponent={Zoom} enterTouchDelay={0}>
-                    <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
+                    <div >
                         {this.props.children}
                     </div>
                 </DarkTooltip>
@@ -76,7 +76,7 @@ class CustomTooltip extends Component {
         } else {
             return ( 
                 <LightTooltip title={this.props.title} placement={this.placement} PopperProps={this.offsetProps} arrow TransitionComponent={Zoom} enterTouchDelay={0}>
-                    <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
+                    <div >
                         {this.props.children}
                     </div>
                 </LightTooltip> 

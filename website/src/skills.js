@@ -61,7 +61,7 @@ class Skills extends Component {
                                     <FontAwesomeIcon icon={faJava} />
                                 </div> 
                             </CustomTooltip>
-                            <CustomTooltip title="Bash Scripting" isDark={this.props.isDark}>
+                            <CustomTooltip title="Shell Scripting" isDark={this.props.isDark}>
                                 <div class={this.props.isDark ? "icons-dark" : "icons-light"}>
                                     <FontAwesomeIcon icon={faTerminal} />
                                 </div> 

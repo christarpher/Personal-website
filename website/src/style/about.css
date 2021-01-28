@@ -43,6 +43,7 @@
     font-family: "Saira Extra Condensed";
     font-weight: 700;
     transition-duration: .2s;
+    padding-top: 5vh;
     margin-bottom: 0;
 }
 .first-name-light {
@@ -63,8 +64,8 @@
 }
 
 
-#social-icons {
-    font-size: var(--font-size-social-icons);
+#connect-icons {
+    font-size: var(--font-size-connect-icons);
     display: flex;
     flex-wrap: wrap;
     flex-basis: content;
@@ -72,19 +73,19 @@
     text-align: center;
     transition: .2s;
 }
-#social-icons div, #social-icons a{
-    flex-basis: calc(100% / 6);
+#connect-icons div, #connect-icons a{
+    flex-basis: calc((100% / 6) - 4vw);
     transition: .2s;
 }
-#social-icons .icons-dark {
+#connect-icons .icons-dark {
     color: var(--text-color-dark);
 }
-#social-icons .icons-dark:hover {
+#connect-icons .icons-dark:hover {
     color: var(--last-name-dark);
 }
-#social-icons .icons-light {
+#connect-icons .icons-light {
     color: var(--text-color-light);
 }
-#social-icons .icons-light:hover {
+#connect-icons .icons-light:hover {
     color: var(--last-name-light);
 }

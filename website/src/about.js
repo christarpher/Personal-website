@@ -19,7 +19,7 @@ class About extends Component {
                     <p>
                         A recent computer science graduate exerienced in web development, AWS, CI/CD processes, and currently looking for work.
                     </p>
-                    <div id="social-icons">
+                    <div id="connect-icons">
                         <CustomTooltip title="View my GitHub" isDark={this.props.isDark}>
                             <a class={this.props.isDark ? "icons-dark" : "icons-light"} href="https://github.com/christarpher">
                                 <FontAwesomeIcon icon={faGithub} />

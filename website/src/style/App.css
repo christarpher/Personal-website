@@ -30,7 +30,7 @@
     --font-size-app-body: calc(12px + 0.8vw);
     --font-size-first-last-name: 10vw;
     --font-size-about-contact: calc(6px + 3vw);
-    --font-size-social-icons: calc(2rem + 3vw);
+    --font-size-connect-icons: calc(2rem + 3vw);
     --font-size-position-name: calc(12px + 4vw);
     --font-size-company-name: calc(6px + 3vw);
     --font-size-position-time: calc(6px + 3vw);
@@ -44,7 +44,6 @@
     font-size: var(--font-size-app-body);
     font-family: "muli";
     transition: background-color, color .2s ease;
-    padding-top: 5rem !important;
     padding-bottom: 5rem !important;
     overflow: auto;
 }

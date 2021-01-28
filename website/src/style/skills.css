@@ -6,7 +6,7 @@
     margin-top: 3vh;
 }
 #skills-icons {
-    font-size: var(--font-size-social-icons);
+    font-size: var(--font-size-connect-icons);
     display: flex;
     flex-wrap: wrap;
     flex-basis: content;
@@ -17,15 +17,19 @@
 
 #skills-icons .icons-dark {
     color: var(--text-color-dark);
+    transition: .2s;
 }
 #skills-icons .icons-dark:hover {
     color: var(--last-name-dark);
+    transition: .2s;
 }
 #skills-icons .icons-light {
     color: var(--text-color-light);
+    transition: .2s;
 }
 #skills-icons .icons-light:hover {
     color: var(--last-name-light);
+    transition: .2s;
 }
 
 .skills-header {
@@ -36,7 +40,7 @@
     font-size: var(--font-size-company-name);
 }
 #skills-icons div, #skills-icons a {
-    flex-basis: calc(100% / 6);
+    flex-basis: calc((100% / 6) - 4vw);
 }
 #skills-list {
     display: flex;
