@@ -44,11 +44,13 @@
 
 .column-image {
     width: 25vw;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
 }
 .column-image-double {
     width: 50vw;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
 }
