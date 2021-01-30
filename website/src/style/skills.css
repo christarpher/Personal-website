@@ -37,7 +37,7 @@
     font-family: "Saira Extra Condensed";
     display: inline;
     text-align: left;
-    font-size: var(--font-size-company-name);
+    font-size: var(--font-size-position-name);
 }
 #skills-icons div, #skills-icons a {
     flex-basis: calc((100% / 6) - 4vw);

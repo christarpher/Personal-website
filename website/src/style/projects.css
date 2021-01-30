@@ -1,4 +1,83 @@
-.projects-container {
-    font-size: var(--font-size);
-    line-height: var(--line-height);
+.project-header {
+    font-weight: 700;
+    font-family: "Saira Extra Condensed";
+    display: block;
+    text-align: left;
+    font-size: var(--font-size-position-name);
+    margin-top: 3vw;
+    margin-bottom: 2vw;
+}
+.feature-header {
+    font-weight: 700;
+    font-family: "Saira Extra Condensed";
+    display: inline;
+    text-align: left;
+    font-size: var(--font-size-company-name);
+    margin-top: 3vw;
+}
+
+.padding-left {
+    padding-left: 2vw;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 2vw;
+    width: 100%;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+.double-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 2;
+}
+
+.column-image {
+    width: 25vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+.column-image-double {
+    width: 40vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.image-border-light {
+    border: 3px solid var(--text-color-light);
+    border-radius: 3px;
+}
+.image-border-dark {
+    border: 3px solid var(--text-color-dark);
+    border-radius: 3px;
+}
+
+
+
+@media (max-width: 768px) {
+    .padding-left-mobile {
+        padding-left: 2vw;
+    }
+    .column {
+        flex-basis: 100%;
+        margin-top: 3vw;
+    }
+    .double-column {
+        flex-basis: 100%;
+        margin-top: 3vw;
+    }
+    .column-image {
+        width: 60vw;
+    }
+    .column-image-double {
+        width: 80vw;
+    }
 }
