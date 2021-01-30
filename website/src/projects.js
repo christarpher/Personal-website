@@ -1,5 +1,5 @@
 import { Component } from "react";
-import AwesomeSlider from 'react-awesome-slider';
+
 import teslar1 from './assets/teslar/teslar1.png';
 import teslar2 from './assets/teslar/teslar2.png';
 import teslar3 from './assets/teslar/teslar3.png';
@@ -14,13 +14,66 @@ import shootstuff6 from './assets/game/shootstuff6.png';
 import shootstuff7 from './assets/game/shootstuff7.png';
 import shootstuff8 from './assets/game/shootstuff8.png';
 
-import 'react-awesome-slider/dist/styles.css';
-import withAutoplay from 'react-awesome-slider/dist/autoplay';
+import ImageGallery from 'react-image-gallery';
+
+
+const images_teslar = [
+    {
+        original: teslar1,
+        bulletClass: "gallery-bullet",
+    },
+    {
+        original: teslar2,
+        bulletClass: "gallery-bullet",
+    },
+    {
+        original: teslar3,
+        bulletClass: "gallery-bullet",
+    },
+    {
+        original: teslar4,
+        bulletClass: "gallery-bullet",
+    }
+]
+
+const images_game = [
+    {
+        original: shootstuff1,
+        bulletClass: "gallery-bullet",
+    },
+    {
+        original: shootstuff2,
+        bulletClass: "gallery-bullet",
+    },
+    {
+        original: shootstuff3,
+        bulletClass: "gallery-bullet",
+    },
+    {
+        original: shootstuff4,
+        bulletClass: "gallery-bullet",
+    },
+    {
+        original: shootstuff5,
+        bulletClass: "gallery-bullet",
+    },
+    {
+        original: shootstuff6,
+        bulletClass: "gallery-bullet",
+    },
+    {
+        original: shootstuff7,
+        bulletClass: "gallery-bullet",
+    },
+    {
+        original: shootstuff8,
+        bulletClass: "gallery-bullet",
+    }
+]
 
 
 class Projects extends Component {
     render() {
-        const AutoplaySlider = withAutoplay(AwesomeSlider);
 
         return (
             <section id="projects">
@@ -33,15 +86,9 @@ class Projects extends Component {
                     <div class="row">
                         <div class="column">
                             <div class={`column-image ${this.props.isDark ? "image-border-dark" : "image-border-light"}`}>
-                                <AutoplaySlider
-                                style={{ "--slider-height-percentage": "178%", "--slider-transition-duration": "200ms", 
-                                        "--loader-bar-color": "var(--image-border-dark)" }} 
-                                play={true} cancelOnInteraction={false} interval={4000} organicArrows={false} bullets={false}>
-                                    <div data-src={teslar1} />
-                                    <div data-src={teslar2} />
-                                    <div data-src={teslar3} />
-                                    <div data-src={teslar4} />
-                                </AutoplaySlider>
+                                <ImageGallery items={images_teslar} showNav={false} showThumbnails={false} showFullscreenButton={false} 
+                                useBrowserFullscreen={false} showPlayButton={false} showBullets={true} autoPlay={true} 
+                                disableKeyDown={true} slideDuration={200} slideInterval={4000}/>
                             </div>
                         </div>
                         <div class="double-column">
@@ -58,10 +105,10 @@ class Projects extends Component {
                     </div>
                     <div class="row">
                         <div class="column">
-                            <div class="feature-header padding-left-mobile">
+                            <div class="feature-header">
                                 Technologies Used
                             </div>
-                            <p class="padding-left-mobile">
+                            <p>
                                 React, Redux, Sass, Node.js
                             </p>
                         </div>
@@ -76,7 +123,7 @@ class Projects extends Component {
                     <div class="spacing"></div>
                     <div class="row">
                         <div class="column">
-                            <h3 class="padding-left-mobile">Game Features: </h3>
+                            <h3>Game Features: </h3>
                             <ul>
                                 <li>Saving / Loading system</li>
                                 <li>Unlockable abilities</li>
@@ -90,19 +137,9 @@ class Projects extends Component {
                         
                         <div class="double-column">
                             <div class={`column-image-double ${this.props.isDark ? "image-border-dark" : "image-border-light"}`}>
-                                <AutoplaySlider
-                                style={{ "--slider-height-percentage": "60%", "--slider-transition-duration": "200ms", 
-                                        "--loader-bar-color": "var(--image-border-dark)" }} 
-                                play={true} cancelOnInteraction={false} interval={4000} organicArrows={false} bullets={false}>
-                                    <div data-src={shootstuff1} />
-                                    <div data-src={shootstuff2} />
-                                    <div data-src={shootstuff3} />
-                                    <div data-src={shootstuff4} />
-                                    <div data-src={shootstuff5} />
-                                    <div data-src={shootstuff6} />
-                                    <div data-src={shootstuff7} />
-                                    <div data-src={shootstuff8} />
-                                </AutoplaySlider>
+                                <ImageGallery items={images_game} showNav={false} showThumbnails={false} showFullscreenButton={false} 
+                                useBrowserFullscreen={false} showPlayButton={false} showBullets={true} autoPlay={true} 
+                                disableKeyDown={true} slideDuration={200} slideInterval={4000}/>
                             </div>
                         </div>
                         
