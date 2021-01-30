@@ -17,10 +17,11 @@ import shootstuff8 from './assets/game/shootstuff8.png';
 import 'react-awesome-slider/dist/styles.css';
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
 
-const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 class Projects extends Component {
     render() {
+        const AutoplaySlider = withAutoplay(AwesomeSlider);
+
         return (
             <section id="projects">
                 <hr></hr> 
