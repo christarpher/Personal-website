@@ -115,7 +115,7 @@ class Projects extends Component {
                     </div>
 
                     <div class="project-header">2D Space Shooter</div>
-                    <p>
+                    <p style={{paddingLeft: "1%"}}>
                         A top-down 2D video game where you control a spaceship and progress various levels with different 
                         enemies and bosses. The game provides a plethora of options to kit out and customize your ship to 
                         fit your playstyle. 

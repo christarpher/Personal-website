@@ -6,7 +6,9 @@
     font-size: var(--font-size-position-name);
     margin-top: 3vw;
     margin-bottom: 2vw;
+    
 }
+
 .feature-header {
     font-weight: 700;
     font-family: "Saira Extra Condensed";
@@ -16,7 +18,7 @@
     margin-top: 3vw;
 }
 .padding-left {
-    padding-left: 2vw;
+    padding-left: 6%;
 }
 
 .spacing {
@@ -85,7 +87,7 @@
 
 @media (max-width: 768px) {
     .padding-left {
-        padding-left: 0vw;
+        padding-left: 0%;
     }
     .column {
         flex-basis: 100%;
