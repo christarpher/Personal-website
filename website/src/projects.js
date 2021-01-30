@@ -1,9 +1,19 @@
 import { Component } from "react";
 import AwesomeSlider from 'react-awesome-slider';
-import teslar1 from './assets/teslar1.png';
-import teslar2 from './assets/teslar2.png';
-import teslar3 from './assets/teslar3.png';
-import teslar4 from './assets/teslar4.png';
+import teslar1 from './assets/teslar/teslar1.png';
+import teslar2 from './assets/teslar/teslar2.png';
+import teslar3 from './assets/teslar/teslar3.png';
+import teslar4 from './assets/teslar/teslar4.png';
+
+import shootstuff1 from './assets/game/shootstuff1.png';
+import shootstuff2 from './assets/game/shootstuff2.png';
+import shootstuff3 from './assets/game/shootstuff3.png';
+import shootstuff4 from './assets/game/shootstuff4.png';
+import shootstuff5 from './assets/game/shootstuff5.png';
+import shootstuff6 from './assets/game/shootstuff6.png';
+import shootstuff7 from './assets/game/shootstuff7.png';
+import shootstuff8 from './assets/game/shootstuff8.png';
+
 import 'react-awesome-slider/dist/styles.css';
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
 
@@ -59,9 +69,10 @@ class Projects extends Component {
                     <div class="project-header">2D Space Shooter</div>
                     <p>
                         A top-down 2D video game where you control a spaceship and progress various levels with different 
-                        enemies and bosses. 
+                        enemies and bosses. The game provides a plethora of options to kit out and customize your ship to 
+                        fit your playstyle. 
                     </p>
-
+                    <div class="spacing"></div>
                     <div class="row">
                         <div class="column">
                             <h3 class="padding-left-mobile">Game Features: </h3>
@@ -79,13 +90,17 @@ class Projects extends Component {
                         <div class="double-column">
                             <div class={`column-image-double ${this.props.isDark ? "image-border-dark" : "image-border-light"}`}>
                                 <AutoplaySlider
-                                style={{ "--slider-height-percentage": "100%", "--slider-transition-duration": "200ms", 
+                                style={{ "--slider-height-percentage": "60%", "--slider-transition-duration": "200ms", 
                                         "--loader-bar-color": "var(--image-border-dark)" }} 
                                 play={true} cancelOnInteraction={false} interval={4000} organicArrows={false} bullets={false}>
-                                    <div data-src={teslar1} />
-                                    <div data-src={teslar2} />
-                                    <div data-src={teslar3} />
-                                    <div data-src={teslar4} />
+                                    <div data-src={shootstuff1} />
+                                    <div data-src={shootstuff2} />
+                                    <div data-src={shootstuff3} />
+                                    <div data-src={shootstuff4} />
+                                    <div data-src={shootstuff5} />
+                                    <div data-src={shootstuff6} />
+                                    <div data-src={shootstuff7} />
+                                    <div data-src={shootstuff8} />
                                 </AutoplaySlider>
                             </div>
                         </div>
